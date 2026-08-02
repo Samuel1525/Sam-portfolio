@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sam — Motion Design &amp; Editorial</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        background: "#0D1117",
+        surface:   "#131722",
+        "on-surface":       "#e5e2e2",
+        "on-surface-variant":"#8b8b90",
+        "outline-variant":  "#30363D",
+      },
+      fontFamily: {
+        sans: ["Plus Jakarta Sans", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
+    },
+  },
+};
+</script>
+
+<style>
+  ::-webkit-scrollbar { display: none; }
+
+  /* carousel */
+  @keyframes slide-horizontal {
+    0%, 13%   { transform: translateX(0); }
+    18%, 31%  { transform: translateX(-20%); }
+    36%, 49%  { transform: translateX(-40%); }
+    54%, 67%  { transform: translateX(-60%); }
+    72%, 85%  { transform: translateX(-80%); }
+    90%, 100% { transform: translateX(0); }
+  }
+  .animate-slider {
+    animation: slide-horizontal 20s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  /* halftone */
+  .halftone {
+    background-image: radial-gradient(circle, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+    background-size: 4px 4px;
+  }
+
+  /* scroll arrow */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+
+  /* footer pulse */
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+  .footer-tease {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  .scroll-arrow {
+    animation: bounce 2s infinite;
+  }
+</style>
+</head>
+<body class="bg-background text-on-surface font-sans antialiased">
+
+<!-- ═══════════ HERO ═══════════ -->
+<header class="relative w-full min-h-screen flex flex-col overflow-hidden">
+
+  <div class="absolute inset-0 overflow-hidden">
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-screen">
+      <source src="hero_compressed.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 backdrop-blur-lg"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0D1117]/80 via-[#0D1117]/60 to-background"></div>
+    <div class="absolute inset-0 halftone"></div>
+  </div>
+
+  <div class="absolute -top-40 -right-40 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
+  <div class="absolute top-[20%] -left-40 w-[400px] h-[400px] bg-white/5 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
+
+  <section class="w-full max-w-5xl mx-auto px-6 md:px-12 pt-32 pb-24 relative z-10 flex-1 flex flex-col justify-center">
+    <div class="flex flex-col md:flex-row gap-12 md:items-end justify-between">
+
+      <div class="flex flex-col gap-4 max-w-2xl w-full overflow-hidden min-h-[160px]">
+
+<a href="https://upwork.com/freelancers/samuelandrewym" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 w-fit mb-4 hover:bg-green-500/20 transition-colors">
+  <span class="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></span>
+  <span class="text-sm font-mono text-green-400 uppercase tracking-widest">Available for Booking</span>
+</a>
+
+        <div class="w-full overflow-hidden py-4">
+          <div class="flex w-[500%] animate-slider">
+
+            <div class="w-1/5 shrink-0 pr-8">
+              <h1 class="text-[48px] md:text-[80px] font-extrabold leading-[56px] md:leading-[88px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">
+                Podcast Editor
+              </h1>
+              <p class="text-lg text-on-surface-variant mt-4 max-w-xl">
+                Focus on narrative pacing, audio clarity, and multi-cam synchronization.
+              </p>
+            </div>
+
+            <div class="w-1/5 shrink-0 pr-8">
+              <h1 class="text-[48px] md:text-[80px] font-extrabold leading-[56px] md:leading-[88px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">
+                Short-Form<br>Video Editor
+              </h1>
+              <p class="text-lg text-on-surface-variant mt-4 max-w-xl">
+                High-retention editing for TikTok, Reels, and Shorts.
+              </p>
+            </div>
+
+            <div class="w-1/5 shrink-0 pr-8">
+              <h1 class="text-[48px] md:text-[80px] font-extrabold leading-[56px] md:leading-[88px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">
+                Videographer
+              </h1>
+              <p class="text-lg text-on-surface-variant mt-4 max-w-xl">
+                Professional cinematography and on-set production expertise.
+              </p>
+            </div>
+
+            <div class="w-1/5 shrink-0 pr-8">
+              <h1 class="text-[48px] md:text-[80px] font-extrabold leading-[56px] md:leading-[88px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">
+                Motion Designer
+              </h1>
+              <p class="text-lg text-on-surface-variant mt-4 max-w-xl">
+                Dynamic typography and complex visual effects.
+              </p>
+            </div>
+
+            <div class="w-1/5 shrink-0 pr-8">
+              <h1 class="text-[48px] md:text-[80px] font-extrabold leading-[56px] md:leading-[88px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">
+                Podcast Editor
+              </h1>
+              <p class="text-lg text-on-surface-variant mt-4 max-w-xl">
+                Focus on narrative pacing, audio clarity, and multi-cam synchronization.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 md:flex md:flex-row gap-6 shrink-0 pt-8 md:pt-0">
+        <div class="flex flex-col">
+          <span class="text-2xl md:text-3xl font-bold text-on-surface">50+</span>
+          <span class="text-xs font-mono text-on-surface-variant/60 uppercase">Projects</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-2xl md:text-3xl font-bold text-on-surface">1M+</span>
+          <span class="text-xs font-mono text-on-surface-variant/60 uppercase">Views</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-2xl md:text-3xl font-bold text-on-surface">6+</span>
+          <span class="text-xs font-mono text-on-surface-variant/60 uppercase">Years Exp</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent max-w-5xl mx-auto relative z-10"></div>
+
+  <a href="#work" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/40 hover:text-white/80 transition-colors scroll-arrow">
+    <span class="text-xs font-mono uppercase tracking-widest">Scroll</span>
+    <span class="material-symbols-outlined text-2xl">keyboard_arrow_down</span>
+  </a>
+</header>
+
+<!-- ═══════════ LONG-FORM EDITS ═══════════ -->
+<section id="work" class="w-full max-w-5xl mx-auto px-6 md:px-12 py-20 relative z-10">
+  <div class="flex items-center gap-4 mb-12">
+    <h2 class="text-2xl md:text-3xl font-bold text-on-surface uppercase tracking-tight">Long-Form Edits</h2>
+    <div class="h-px flex-1 bg-white/10"></div>
+    <span class="text-xs font-mono text-on-surface-variant/50">01</span>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- YT: qBBUaV8BK4E -->
+    <div class="group relative block aspect-video rounded-xl overflow-hidden transition-all duration-300 border border-white/5 hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.03)] bg-surface cursor-pointer" onclick="window.open('https://www.youtube.com/watch?v=qBBUaV8BK4E','_blank')">
+      <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+           style="background-image: url('https://img.youtube.com/vi/qBBUaV8BK4E/maxresdefault.jpg')"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#131722]/80 to-transparent opacity-80 group-hover:opacity-50 transition-opacity duration-300"></div>
+      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="w-14 h-14 rounded-full bg-white/10 backdrop-blur flex items-center justify-center border border-white/20">
+          <span class="material-symbols-outlined text-white text-3xl" style="font-variation-settings:'FILL' 1;">play_arrow</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- YT: EgQcV5eskEQ -->
+    <div class="group relative block aspect-video rounded-xl overflow-hidden transition-all duration-300 border border-white/5 hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.03)] bg-surface cursor-pointer" onclick="window.open('https://www.youtube.com/watch?v=EgQcV5eskEQ','_blank')">
+      <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+           style="background-image: url('https://img.youtube.com/vi/EgQcV5eskEQ/maxresdefault.jpg')"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#131722]/80 to-transparent opacity-80 group-hover:opacity-50 transition-opacity duration-300"></div>
+      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="w-14 h-14 rounded-full bg-white/10 backdrop-blur flex items-center justify-center border border-white/20">
+          <span class="material-symbols-outlined text-white text-3xl" style="font-variation-settings:'FILL' 1;">play_arrow</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- YT: jxRInho6qz8 -->
+    <div class="group relative block aspect-video rounded-xl overflow-hidden transition-all duration-300 border border-white/5 hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.03)] bg-surface cursor-pointer" onclick="window.open('https://www.youtube.com/watch?v=jxRInho6qz8','_blank')">
+      <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+           style="background-image: url('https://img.youtube.com/vi/jxRInho6qz8/maxresdefault.jpg')"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#131722]/80 to-transparent opacity-80 group-hover:opacity-50 transition-opacity duration-300"></div>
+      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="w-14 h-14 rounded-full bg-white/10 backdrop-blur flex items-center justify-center border border-white/20">
+          <span class="material-symbols-outlined text-white text-3xl" style="font-variation-settings:'FILL' 1;">play_arrow</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- YT: X0IoiyVbeLY -->
+    <div class="group relative block aspect-video rounded-xl overflow-hidden transition-all duration-300 border border-white/5 hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.03)] bg-surface cursor-pointer" onclick="window.open('https://www.youtube.com/watch?v=X0IoiyVbeLY','_blank')">
+      <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+           style="background-image: url('https://img.youtube.com/vi/X0IoiyVbeLY/maxresdefault.jpg')"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#131722]/80 to-transparent opacity-80 group-hover:opacity-50 transition-opacity duration-300"></div>
+      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="w-14 h-14 rounded-full bg-white/10 backdrop-blur flex items-center justify-center border border-white/20">
+          <span class="material-symbols-outlined text-white text-3xl" style="font-variation-settings:'FILL' 1;">play_arrow</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="text-center mt-10 text-base font-mono text-on-surface-variant/50 italic footer-tease">
+    just the starters. main course pending.
+  </p>
+</section>
+
+<!-- ═══════════ SHORT-FORM EDITS ═══════════ -->
+<section class="w-full max-w-5xl mx-auto px-6 md:px-12 py-20 relative z-10">
+  <div class="flex items-center gap-4 mb-12 flex-row-reverse">
+    <h2 class="text-2xl md:text-3xl font-bold text-on-surface uppercase tracking-tight text-right">Short-Form Edits</h2>
+    <div class="h-px flex-1 bg-white/10"></div>
+    <span class="text-xs font-mono text-on-surface-variant/50">02</span>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+<!-- TikTok: 7609335665154690325 -->
+    <div class="relative aspect-[9/16] rounded-xl overflow-hidden border border-white/5 bg-surface">
+      <iframe src="https://www.tiktok.com/embed/7609335665154690325"
+              class="absolute inset-0 w-full h-full" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+    </div>
+
+<!-- TikTok: 7609038411957079314 -->
+    <div class="relative aspect-[9/16] rounded-xl overflow-hidden border border-white/5 bg-surface">
+      <iframe src="https://www.tiktok.com/embed/7609038411957079314"
+              class="absolute inset-0 w-full h-full" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+    </div>
+
+<!-- Drive: 1C6DcEfUK9DNkjmnpojbPYg6-N8bli0R1 -->
+    <div class="relative aspect-[9/16] rounded-xl overflow-hidden border border-white/5 bg-surface">
+      <iframe src="https://drive.google.com/file/d/1C6DcEfUK9DNkjmnpojbPYg6-N8bli0R1/preview"
+              class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay"></iframe>
+    </div>
+
+<!-- Drive: 1HdXCBzdgPzs7oIououYbCjKKG8TjMZ-T -->
+    <div class="relative aspect-[9/16] rounded-xl overflow-hidden border border-white/5 bg-surface">
+      <iframe src="https://drive.google.com/file/d/1HdXCBzdgPzs7oIououYbCjKKG8TjMZ-T/preview"
+              class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay"></iframe>
+    </div>
+
+<!-- Drive: 1iUy0KCkgDlKnpJ8biBqwhgfbhnpszIgI -->
+    <div class="relative aspect-[9/16] rounded-xl overflow-hidden border border-white/5 bg-surface">
+      <iframe src="https://drive.google.com/file/d/1iUy0KCkgDlKnpJ8biBqwhgfbhnpszIgI/preview"
+              class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay"></iframe>
+    </div>
+
+<!-- IG: DUtQmtREm2x -->
+    <div class="relative aspect-[9/16] rounded-xl overflow-hidden border border-white/5 bg-surface">
+      <iframe src="https://www.instagram.com/p/DUtQmtREm2x/embed"
+              class="absolute inset-0 w-full h-full" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+    </div>
+
+  </div>
+
+  <p class="text-center mt-10 text-sm font-mono text-on-surface-variant/30 italic">
+    and plenty more where that came from
+  </p>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="w-full bg-[#0D1117] py-20 mt-20">
+  <div class="max-w-5xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+    <div class="flex flex-col gap-1">
+      <span class="text-2xl font-bold text-on-surface">Sam</span>
+      <p class="text-sm text-on-surface-variant/60">Professional podcast editor and videographer</p>
+    </div>
+    <a href="https://upwork.com/freelancers/samuelandrewym" target="_blank" rel="noopener noreferrer"
+       class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-black text-xs font-mono uppercase tracking-wider hover:bg-white/90 transition-colors">
+      Hire me on Upwork
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
