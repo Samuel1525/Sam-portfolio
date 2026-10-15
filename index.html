@@ -33,16 +33,17 @@ tailwind.config = {
 <style>
   ::-webkit-scrollbar { display: none; }
 
+  /* 5 titles + a copy of the first, so the loop restarts without sliding back */
   @keyframes slide-horizontal {
-    0%, 13%   { transform: translateX(0); }
-    18%, 31%  { transform: translateX(-20%); }
-    36%, 49%  { transform: translateX(-40%); }
-    54%, 67%  { transform: translateX(-60%); }
-    72%, 85%  { transform: translateX(-80%); }
-    90%, 100% { transform: translateX(0); }
+    0%, 16%   { transform: translateX(0); }
+    20%, 36%  { transform: translateX(-16.6667%); }
+    40%, 56%  { transform: translateX(-33.3333%); }
+    60%, 76%  { transform: translateX(-50%); }
+    80%, 96%  { transform: translateX(-66.6667%); }
+    100%      { transform: translateX(-83.3333%); }
   }
   .animate-slider {
-    animation: slide-horizontal 20s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: slide-horizontal 22s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   }
 
   .halftone {
@@ -94,25 +95,29 @@ tailwind.config = {
           <span class="text-sm font-mono text-green-400 uppercase tracking-widest">Available for Booking</span>
         </a>
         <div class="w-full overflow-hidden py-6">
-          <div class="flex w-[500%] animate-slider">
-            <div class="w-1/5 shrink-0 pr-16">
-              <h1 class="text-[48px] md:text-[80px] font-extrabold leading-[56px] md:leading-[88px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">Podcast Editor</h1>
+          <div class="flex w-[600%] animate-slider">
+            <div class="w-1/6 shrink-0 pr-6 lg:pr-16">
+              <h1 class="text-[35px] md:text-[44px] lg:text-[68px] font-extrabold leading-[43px] md:leading-[52px] lg:leading-[76px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">Podcast<br>Editor</h1>
               <p class="text-lg text-on-surface-variant mt-4 max-w-xl">Focus on narrative pacing, audio clarity, and multi-cam synchronization.</p>
             </div>
-            <div class="w-1/5 shrink-0 pr-16">
-              <h1 class="text-[48px] md:text-[80px] font-extrabold leading-[56px] md:leading-[88px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">Short-Form<br>Video Editor</h1>
+            <div class="w-1/6 shrink-0 pr-6 lg:pr-16">
+              <h1 class="text-[35px] md:text-[44px] lg:text-[68px] font-extrabold leading-[43px] md:leading-[52px] lg:leading-[76px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">Short-Form<br>Video Editor</h1>
               <p class="text-lg text-on-surface-variant mt-4 max-w-xl">High-retention editing for TikTok, Reels, and Shorts.</p>
             </div>
-            <div class="w-1/5 shrink-0 pr-16">
-              <h1 class="text-[48px] md:text-[80px] font-extrabold leading-[56px] md:leading-[88px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">Post-Production<br>Lead</h1>
-              <p class="text-lg text-on-surface-variant mt-4 max-w-xl">Workflows, review and footage systems that ship edits faster.</p>
-            </div>
-            <div class="w-1/5 shrink-0 pr-16">
-              <h1 class="text-[48px] md:text-[80px] font-extrabold leading-[56px] md:leading-[88px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">YouTube Editor</h1>
+            <div class="w-1/6 shrink-0 pr-6 lg:pr-16">
+              <h1 class="text-[35px] md:text-[44px] lg:text-[68px] font-extrabold leading-[43px] md:leading-[52px] lg:leading-[76px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">YouTube<br>Editor</h1>
               <p class="text-lg text-on-surface-variant mt-4 max-w-xl">Long-form pacing and story for talking-head and podcast content.</p>
             </div>
-            <div class="w-1/5 shrink-0 pr-16">
-              <h1 class="text-[48px] md:text-[80px] font-extrabold leading-[56px] md:leading-[88px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">Podcast Editor</h1>
+            <div class="w-1/6 shrink-0 pr-6 lg:pr-16">
+              <h1 class="text-[35px] md:text-[44px] lg:text-[68px] font-extrabold leading-[43px] md:leading-[52px] lg:leading-[76px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">Post-Production<br>Lead</h1>
+              <p class="text-lg text-on-surface-variant mt-4 max-w-xl">Workflows, review and footage systems that ship edits faster.</p>
+            </div>
+            <div class="w-1/6 shrink-0 pr-6 lg:pr-16">
+              <h1 class="text-[35px] md:text-[44px] lg:text-[68px] font-extrabold leading-[43px] md:leading-[52px] lg:leading-[76px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">Creative<br>Technologist</h1>
+              <p class="text-lg text-on-surface-variant mt-4 max-w-xl">Editor who builds the tools: a client review app and AI-searchable B-roll.</p>
+            </div>
+            <div class="w-1/6 shrink-0 pr-6 lg:pr-16">
+              <h1 class="text-[35px] md:text-[44px] lg:text-[68px] font-extrabold leading-[43px] md:leading-[52px] lg:leading-[76px] -tracking-[0.02em] md:-tracking-[0.04em] text-white">Podcast<br>Editor</h1>
               <p class="text-lg text-on-surface-variant mt-4 max-w-xl">Focus on narrative pacing, audio clarity, and multi-cam synchronization.</p>
             </div>
           </div>
